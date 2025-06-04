@@ -31,19 +31,36 @@
 //         }
 //     }
 // }
-import java.util.Scanner;
+// import java.util.Scanner;
+// public class Day3 {
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System);
+//         int n = sc.nextInt();
+//         for(int i = 0;i<n;i++){
+//             for(int j = 0;j<i;j++){
+//                 System.out.println("*");
+//             }
+//             System.out.println("");
+//         }
+//     }
+// }
 public class Day3 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for (int i = 1;i<n;i++){
-            for(int j = 0;j<=;j++){
+        int a[] = {3,5,4,1,2};
+        System.out.println(check(a));
+    }
+    public static boolean check (int a[]) {
+        int n = a.length;
+        int cnt=0;
+        for(int i=0;i<n;i++){
 
-                System.out.print("*");
-
+            if(a[i]>a[(i+1)%n]){
+                cnt++;
             }
-            System.out.println();
         }
+    
     }
 }
+
